@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A Girafa</title>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <form id="formulario">
+      <p>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" />
+      </p>
+      <p>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+      </p>
+      <input type="submit" value="enviar" id="botao" />
+    </form>
+    <script>
+      document
+        .getElementById("formulario")
+        .addEventListener("submit", criarParagrafo);
+      function criarParagrafo() {
+        var paragrafo = document.createElement("p");
+        paragrafo.textContent = "Você clicou o botao!";
+        document.body.appendChild(paragrafo);
+      }
+    </script>
+  </body>
+</html>
